@@ -823,7 +823,7 @@ DEX_INLINE const DexAnnotationSetItem* dexGetClassAnnotationSet(
 
 /* get the class' field annotation list */
 DEX_INLINE const DexFieldAnnotationsItem* dexGetFieldAnnotations(
-    const DexFile* pDexFile, const DexAnnotationsDirectoryItem* pAnnoDir)
+    const DexFile* pDexFile __attribute__((unused)), const DexAnnotationsDirectoryItem* pAnnoDir)
 {
     if (pAnnoDir->fieldsSize == 0)
         return NULL;
@@ -833,7 +833,7 @@ DEX_INLINE const DexFieldAnnotationsItem* dexGetFieldAnnotations(
 }
 
 /* get field annotation list size */
-DEX_INLINE int dexGetFieldAnnotationsSize(const DexFile* pDexFile,
+DEX_INLINE int dexGetFieldAnnotationsSize(const DexFile* pDexFile __attribute__((unused)),
     const DexAnnotationsDirectoryItem* pAnnoDir)
 {
     return pAnnoDir->fieldsSize;
@@ -848,7 +848,7 @@ DEX_INLINE const DexAnnotationSetItem* dexGetFieldAnnotationSetItem(
 
 /* get the class' method annotation list */
 DEX_INLINE const DexMethodAnnotationsItem* dexGetMethodAnnotations(
-    const DexFile* pDexFile, const DexAnnotationsDirectoryItem* pAnnoDir)
+    const DexFile* pDexFile __attribute__((unused)), const DexAnnotationsDirectoryItem* pAnnoDir)
 {
     if (pAnnoDir->methodsSize == 0)
         return NULL;
@@ -863,7 +863,7 @@ DEX_INLINE const DexMethodAnnotationsItem* dexGetMethodAnnotations(
 }
 
 /* get method annotation list size */
-DEX_INLINE int dexGetMethodAnnotationsSize(const DexFile* pDexFile,
+DEX_INLINE int dexGetMethodAnnotationsSize(const DexFile* pDexFile __attribute__((unused)),
     const DexAnnotationsDirectoryItem* pAnnoDir)
 {
     return pAnnoDir->methodsSize;
@@ -878,7 +878,7 @@ DEX_INLINE const DexAnnotationSetItem* dexGetMethodAnnotationSetItem(
 
 /* get the class' parameter annotation list */
 DEX_INLINE const DexParameterAnnotationsItem* dexGetParameterAnnotations(
-    const DexFile* pDexFile, const DexAnnotationsDirectoryItem* pAnnoDir)
+    const DexFile* pDexFile __attribute__((unused)), const DexAnnotationsDirectoryItem* pAnnoDir)
 {
     if (pAnnoDir->parametersSize == 0)
         return NULL;
@@ -894,7 +894,7 @@ DEX_INLINE const DexParameterAnnotationsItem* dexGetParameterAnnotations(
 }
 
 /* get method annotation list size */
-DEX_INLINE int dexGetParameterAnnotationsSize(const DexFile* pDexFile,
+DEX_INLINE int dexGetParameterAnnotationsSize(const DexFile* pDexFile __attribute__((unused)),
     const DexAnnotationsDirectoryItem* pAnnoDir)
 {
     return pAnnoDir->parametersSize;
